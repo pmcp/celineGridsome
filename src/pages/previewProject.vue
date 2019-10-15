@@ -45,14 +45,14 @@ export default {
 .article {
   &-layout {
     &__section {
-      @extend .flex;
-      @extend .justify-center;
+      display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       width: 100%;
     }
     &__block {
-      @extend .flex;
-      @extend .justify-center;
+      display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       width: 100%;
     }
