@@ -4,7 +4,7 @@
       :title="$page.globals.edges[0].node.title"
     >
     </main-header>
-    <category-grid :grid-items="$page.projects.category"></category-grid>
+    <!-- <category-grid :grid-items="$page.projects.category"></category-grid> -->
     <main class="article__layout">
       <article-section
         v-for="(section, key) in $page.projects.layout"
