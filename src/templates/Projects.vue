@@ -27,6 +27,7 @@ query projects($id: ID!) {
         settings {
           width
           text
+          height
           image {
             styles {
               path

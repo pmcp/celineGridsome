@@ -27,14 +27,10 @@ export default {
   },
   mounted: function() {
     window.addEventListener('message', this.handlePreviewEntry)
-    // this.$nextTick(function() {
-    //   console.log('test')
-    //   window.addEventListener('message', this.handlePreviewEntry)
-    // })
   },
   methods: {
     handlePreviewEntry(event) {
-      console.log('test2', event)
+      console.log(event)
       this.project = event.data.entry
     }
   }

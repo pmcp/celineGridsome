@@ -13,7 +13,7 @@ export default {
   computed: {
     styleObject() {
       return {
-        height: this.block.height + '%',
+        height: this.block.height + 'vw',
         width: '100%'
       }
     }

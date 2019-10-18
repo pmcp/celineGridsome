@@ -13,7 +13,7 @@ export default {
   computed: {
     styleObject() {
       return {
-        width: this.block.width + '%'
+        width: this.block.width + 'vw'
       }
     }
   }
