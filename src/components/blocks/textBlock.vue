@@ -14,6 +14,7 @@ export default {
   },
   computed: {
     styleObject() {
+      if(!this.block.width) this.block.width = 100
       return {
         width: `${this.block.width}vw`
       }
