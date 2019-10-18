@@ -28,8 +28,8 @@ a {
 // Projects
 .article__block {
   p {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: calc(12px + 0.2vw);
+    line-height: calc(16px + 0.2vw);
     text-align: left;
   }
 }
