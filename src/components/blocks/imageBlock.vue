@@ -5,7 +5,7 @@
     
     <img
       v-if="block.image !== null"
-      :src="block.image.styles[0].path"
+      :src="'http://celinedscms.friendlyinter.net/storage/uploads/' + block.image.path"
       class="image--basic">
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
   computed: {
     styleObject() {
       return {
-        width: `${this.block.width}vw`
+        width: `${this.block.width}%`
       }
     }
   }

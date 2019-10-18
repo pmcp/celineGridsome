@@ -11,6 +11,6 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout),
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,400,500&display=swap'
+    href: 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400|Roboto:100,300,400,500,700&display=swap'
   })
 }

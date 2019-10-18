@@ -1,34 +1,52 @@
 <template>
-
-  <main class="cf pa3 pa4-m pa5-l mw9 w-100 center">
-    <div class="flex flex-wrap justify-center">
-      <div
-        v-for="edge in $page.categories.edges"
-        :key="edge.node.id"
-        class="outline w-25 pa3 mr2 mb2 tc flex justify-center items-center"
-      >
-        <a :href="edge.node.linkedArticle.slug">{{ edge.node.name }}</a>
-      </div>
-    </div>
-  </main>
+  <div>
+    
+    <main-header
+      :title="$page.globals.edges[0].node.title"
+      :subtitle="$page.globals.edges[0].node.subtitle">
+    </main-header>
+    <category-grid :grid-items="$page.categories.edges"></category-grid>
+  </div>
 </template>
+
 <page-query>
-query Categories {
+query {
   categories: allCategories {
     edges {
       node {
         id
         name
         slug
+        titleInGrid
         linkedArticle {
         	slug
       	}
+      }
+    }
+  },
+  globals: allGlobals {
+    edges {
+      node {
+        id
+        title
+        subtitle
       }
     }
   }
 }
 </page-query>
 
-<style lang="scss">
 
+<script>
+import mainHeader from "~/components/mainHeader.vue";
+import categoryGrid from "~/components/categoryGrid.vue";
+export default {
+  components: {
+    mainHeader: mainHeader,
+    categoryGrid: categoryGrid
+  }
+};
+</script>
+
+<style lang="scss">
 </style>

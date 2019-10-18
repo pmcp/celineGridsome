@@ -1,6 +1,5 @@
 <template :style="styleObject">
   <div :style="styleObject">
-    
     <component
       v-for="(block, key) in blocks"
       :key="key"
